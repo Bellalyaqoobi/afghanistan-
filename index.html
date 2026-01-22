@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه بزرگ افغان - بازار آنلاین خرید و فروش</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- نوار بالایی -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="welcome-text">به فروشگاه بزرگ افغان خوش آمدید!</div>
+                    <div class="top-links">
+                        <a href="#" id="currency-toggle">افغانی (AFN) <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" id="language-toggle">فارسی <i class="fas fa-chevron-down"></i></a>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> راهنما</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش اصلی هدر -->
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- لوگو -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1><i class="fas fa-store"></i> فروشگاه بزرگ افغان</h1>
+                            <p>بازار آنلاین خرید و فروش</p>
+                        </a>
+                    </div>
+                    
+                    <!-- جستجو -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="جستجوی محصولات، دستهبندیها و فروشگاهها...">
+                            <select id="search-category">
+                                <option value="all">همه دستهبندیها</option>
+                                <option value="electronics">الکترونیک</option>
+                                <option value="fashion">مد و پوشاک</option>
+                                <option value="home">خانه و آشپزخانه</option>
+                                <option value="beauty">زیبایی و سلامت</option>
+                            </select>
+                            <button id="search-btn"><i class="fas fa-search"></i> جستجو</button>
+                        </div>
+                        <div class="search-suggestions">
+                            <span>پیشنهادها:</span>
+                            <a href="#">گوشی موبایل</a>
+                            <a href="#">لباس زنانه</a>
+                            <a href="#">لوازم خانگی</a>
+                            <a href="#">کفش</a>
+                        </div>
+                    </div>
+                    
+                    <!-- منو کاربر -->
+                    <div class="user-menu">
+                        <div class="user-actions">
+                            <a href="login.html" class="login-btn"><i class="fas fa-user"></i> ورود / ثبتنام</a>
+                            <a href="cart.html" class="cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                                سبد خرید
+                            </a>
+                            <a href="wishlist.html" class="wishlist-btn"><i class="fas fa-heart"></i></a>
+                        </div>
+                        <div class="user-avatar" id="user-dropdown-trigger">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="user-dropdown" id="user-dropdown">
+                                <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> داشبورد</a>
+                                <a href="orders.html"><i class="fas fa-shopping-bag"></i> سفارشهای من</a>
+                                <a href="messages.html"><i class="fas fa-envelope"></i> پیامها</a>
+                                <a href="profile.html"><i class="fas fa-user-cog"></i> حساب کاربری</a>
+                                <a href="seller-dashboard.html"><i class="fas fa-store-alt"></i> پنل فروشنده</a>
+                                <a href="admin-dashboard.html" class="admin-link"><i class="fas fa-crown"></i> پنل مدیریت</a>
+                                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> خروج</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ناوبری اصلی -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> خانه</a></li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="fas fa-th-large"></i> دستهبندیها <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="category-column">
+                                    <h4>الکترونیک</h4>
+                                    <a href="#">موبایل و تبلت</a>
+                                    <a href="#">لپتاپ و کامپیوتر</a>
+                                    <a href="#">لوازم جانبی الکترونیک</a>
+                                    <a href="#">دوربین</a>
+                                    <a href="#">صوتی و تصویری</a>
+                                </div>
+                                <div class="category-column">
+                                    <h4>مد و پوشاک</h4>
+                                    <a href="#">لباس مردانه</a>
+                                    <a href="#">لباس زنانه</a>
+                                    <a href="#">کفش</a>
+                                    <a href="#">اکسسوری</a>
+                                    <a href="#">زیورآلات</a>
+                                </div>
+                                <div class="category-column">
+                                    <h4>خانه و آشپزخانه</h4>
+                                    <a href="#">لوازم آشپزخانه</a>
+                                    <a href="#">مبلمان و دکور</a>
+                                    <a href="#">لوازم بهداشتی</a>
+                                    <a href="#">لوازم برقی خانه</a>
+                                    <a href="#">وسایل نظافت</a>
+                                </div>
+                                <div class="category-column">
+                                    <h4>سلامت و زیبایی</h4>
+                                    <a href="#">لوازم آرایشی</a>
+                                    <a href="#">لوازم بهداشتی</a>
+                                    <a href="#">عطر و ادکلن</a>
+                                    <a href="#">مراقبت پوست</a>
+                                    <a href="#">لوازم آرایشگاه</a>
+                                </div>
+                                <div class="category-column">
+                                    <h4>سایر</h4>
+                                    <a href="#">کتاب و لوازم تحریر</a>
+                                    <a href="#">اسباب بازی</a>
+                                    <a href="#">ورزش و سفر</a>
+                                    <a href="#">خودرو و موتور</a>
+                                    <a href="#">صنعتی و تجاری</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="flash-sales.html"><i class="fas fa-bolt"></i> فروش ویژه</a></li>
+                    <li><a href="top-sellers.html"><i class="fas fa-crown"></i> برترین فروشندگان</a></li>
+                    <li><a href="new-products.html"><i class="fas fa-star"></i> محصولات جدید</a></li>
+                    <li><a href="brands.html"><i class="fas fa-tags"></i> برندها</a></li>
+                    <li><a href="help-center.html"><i class="fas fa-headset"></i> پشتیبانی</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- بخش اصلی محتوا -->
+    <main class="main-content">
+        <!-- اسلایدر تبلیغاتی -->
+        <section class="hero-slider">
+            <div class="container">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide active">
+                            <div class="slide-content">
+                                <h2>فروش بزرگ نوروزی</h2>
+                                <p>تا 70% تخفیف روی هزاران محصول</p>
+                                <a href="#" class="btn-primary">مشاهده محصولات</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فروش نوروزی">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h2>ارسال رایگان</h2>
+                                <p>برای خریدهای بالای 500,000 افغانی</p>
+                                <a href="#" class="btn-primary">همین حالا خرید کنید</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ارسال رایگان">
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h2>فروشنده شوید</h2>
+                                <p>محصولات خود را در بزرگترین بازار آنلاین افغانستان بفروشید</p>
+                                <a href="seller-register.html" class="btn-primary">ثبتنام به عنوان فروشنده</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فروشنده شوید">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev"><i class="fas fa-chevron-right"></i></button>
+                        <button class="slider-next"><i class="fas fa-chevron-left"></i></button>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- دستهبندیهای سریع -->
+        <section class="quick-categories">
+            <div class="container">
+                <h2 class="section-title">خرید بر اساس دستهبندی</h2>
+                <div class="categories-grid">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span>موبایل و تبلت</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <span>لپتاپ و کامپیوتر</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <span>پوشاک</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <span>کفش</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span>خانه و آشپزخانه</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span>سلامت و زیبایی</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <span>کتاب و لوازم تحریر</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <span>خودرو و موتور</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- محصولات ویژه -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">محصولات پرفروش</h2>
+                    <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="products-grid" id="featured-products">
+                    <!-- محصولات توسط JavaScript لود میشوند -->
+                </div>
+            </div>
+        </section>
+
+        <!-- پیشنهادهای روز -->
+        <section class="daily-deals">
+            <div class="container">
+                <div class="deals-header">
+                    <h2 class="section-title">پیشنهادهای روز</h2>
+                    <div class="timer">
+                        <span>زمان باقیمانده:</span>
+                        <div class="countdown">
+                            <span id="hours">12</span>:<span id="minutes">45</span>:<span id="seconds">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-grid" id="daily-deals">
+                    <!-- محصولات توسط JavaScript لود میشوند -->
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش فروشندگان برتر -->
+        <section class="top-sellers">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">فروشندگان برتر</h2>
+                    <a href="top-sellers.html" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="sellers-grid">
+                    <div class="seller-card">
+                        <div class="seller-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="فروشنده">
+                            <span class="seller-badge">طلایی</span>
+                        </div>
+                        <div class="seller-info">
+                            <h4>فروشگاه الکترونیک پاسارگاد</h4>
+                            <div class="seller-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                                <span>(1,245 نظر)</span>
+                            </div>
+                            <p>تخصص: موبایل، لپتاپ، لوازم جانبی</p>
+                        </div>
+                        <a href="seller-profile.html" class="btn-outline">مشاهده فروشگاه</a>
+                    </div>
+                    <div class="seller-card">
+                        <div class="seller-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="فروشنده">
+                            <span class="seller-badge">نقرهای</span>
+                        </div>
+                        <div class="seller-info">
+                            <h4>بوتیک مد و زیبایی</h4>
+                            <div class="seller-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                                <span>(892 نظر)</span>
+                            </div>
+                            <p>تخصص: پوشاک زنانه، کیف، کفش</p>
+                        </div>
+                        <a href="seller-profile.html" class="btn-outline">مشاهده فروشگاه</a>
+                    </div>
+                    <div class="seller-card">
+                        <div class="seller-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="فروشنده">
+                            <span class="seller-badge">طلایی</span>
+                        </div>
+                        <div class="seller-info">
+                            <h4>فروشگاه لوازم خانگی</h4>
+                            <div class="seller-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                                <span>(2,134 نظر)</span>
+                            </div>
+                            <p>تخصص: لوازم برقی خانگی، آشپزخانه</p>
+                        </div>
+                        <a href="seller-profile.html" class="btn-outline">مشاهده فروشگاه</a>
+                    </div>
+                    <div class="seller-card">
+                        <div class="seller-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="فروشنده">
+                            <span class="seller-badge">برنزی</span>
+                        </div>
+                        <div class="seller-info">
+                            <h4>فروشگاه سلامت و زیبایی</h4>
+                            <div class="seller-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                                <span>(543 نظر)</span>
+                            </div>
+                            <p>تخصص: آرایشی، بهداشتی، عطر</p>
+                        </div>
+                        <a href="seller-profile.html" class="btn-outline">مشاهده فروشگاه</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش تبلیغاتی -->
+        <section class="promo-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2>فروشنده شوید و درآمد کسب کنید!</h2>
+                    <p>محصولات خود را به میلیونها مشتری در سراسر افغانستان بفروشید. پنل فروشندگان ما ابزارهای قدرتمندی برای مدیریت فروش، موجودی و حمل و نقل ارائه میدهد.</p>
+                    <div class="banner-actions">
+                        <a href="seller-register.html" class="btn-primary">ثبتنام به عنوان فروشنده</a>
+                        <a href="seller-guide.html" class="btn-outline">راهنمای فروشندگان</a>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="فروشنده شوید">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <h3><i class="fas fa-store"></i> فروشگاه بزرگ افغان</h3>
+                        </div>
+                        <p>بازار آنلاین خرید و فروش محصولات در افغانستان. ما با هزاران فروشنده و تولیدکننده همکاری میکنیم تا بهترین محصولات را با مناسبترین قیمتها به شما ارائه دهیم.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>لینکهای مفید</h4>
+                        <ul>
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="contact.html">تماس با ما</a></li>
+                            <li><a href="careers.html">فرصتهای شغلی</a></li>
+                            <li><a href="blog.html">وبلاگ</a></li>
+                            <li><a href="sitemap.html">نقشه سایت</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>خدمات مشتریان</h4>
+                        <ul>
+                            <li><a href="help-center.html">مرکز پشتیبانی</a></li>
+                            <li><a href="shipping.html">راهنمای ارسال</a></li>
+                            <li><a href="returns.html">بازگرداندن کالا</a></li>
+                            <li><a href="faq.html">سوالات متداول</a></li>
+                            <li><a href="terms.html">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>با ما همراه باشید</h4>
+                        <p>برای دریافت جدیدترین تخفیفها و پیشنهادهای ویژه در خبرنامه ما عضو شوید:</p>
+                        <div class="newsletter">
+                            <input type="email" placeholder="آدرس ایمیل شما">
+                            <button class="btn-primary">عضویت</button>
+                        </div>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> تماس با پشتیبانی: ۰۷۸۰۱۲۳۴۵۶</p>
+                            <p><i class="fas fa-envelope"></i> ایمیل: info@afghanstore.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> آدرس: کابل، افغانستان</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© ۱۴۰۲ فروشگاه بزرگ افغان. تمامی حقوق محفوظ است.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- پنل مدیریت سریع (برای مدیران) -->
+    <div class="admin-quick-panel" id="adminPanel">
+        <div class="admin-panel-header">
+            <h4><i class="fas fa-crown"></i> پنل مدیریت سریع</h4>
+            <button id="closeAdminPanel"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="admin-panel-content">
+            <a href="admin-dashboard.html"><i class="fas fa-tachometer-alt"></i> داشبورد مدیریت</a>
+            <a href="admin-products.html"><i class="fas fa-box"></i> مدیریت محصولات</a>
+            <a href="admin-orders.html"><i class="fas fa-shopping-bag"></i> مدیریت سفارشات</a>
+            <a href="admin-users.html"><i class="fas fa-users"></i> مدیریت کاربران</a>
+            <a href="admin-sellers.html"><i class="fas fa-store-alt"></i> مدیریت فروشندگان</a>
+            <a href="admin-reports.html"><i class="fas fa-chart-bar"></i> گزارشات و آمار</a>
+        </div>
+    </div>
+
+    <!-- پنل فروشنده سریع (برای فروشندگان) -->
+    <div class="seller-quick-panel" id="sellerPanel">
+        <div class="seller-panel-header">
+            <h4><i class="fas fa-store-alt"></i> پنل فروشنده سریع</h4>
+            <button id="closeSellerPanel"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="seller-panel-content">
+            <a href="seller-dashboard.html"><i class="fas fa-tachometer-alt"></i> داشبورد فروشنده</a>
+            <a href="seller-products.html"><i class="fas fa-box"></i> محصولات من</a>
+            <a href="seller-orders.html"><i class="fas fa-shopping-bag"></i> سفارشات من</a>
+            <a href="seller-inventory.html"><i class="fas fa-warehouse"></i> مدیریت موجودی</a>
+            <a href="seller-analytics.html"><i class="fas fa-chart-line"></i> آمار و تحلیل</a>
+            <a href="seller-promotions.html"><i class="fas fa-bullhorn"></i> تبلیغات و تخفیف</a>
+        </div>
+    </div>
+
+    <!-- پنل کاربری سریع -->
+    <div class="user-quick-panel" id="userPanel">
+        <div class="user-panel-header">
+            <h4><i class="fas fa-user-circle"></i> حساب کاربری من</h4>
+            <button id="closeUserPanel"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="user-panel-content">
+            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> داشبورد کاربری</a>
+            <a href="orders.html"><i class="fas fa-shopping-bag"></i> سفارشهای من</a>
+            <a href="messages.html"><i class="fas fa-envelope"></i> پیامها <span class="badge">3</span></a>
+            <a href="addresses.html"><i class="fas fa-map-marker-alt"></i> آدرسهای من</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> لیست علاقهمندیها</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> نظرات من</a>
+        </div>
+    </div>
+
+    <!-- مودال سبد خرید -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h4><i class="fas fa-shopping-cart"></i> سبد خرید شما</h4>
+                <button id="closeCartModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="empty-cart" id="emptyCartMessage">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>سبد خرید شما خالی است</p>
+                    <a href="products.html" class="btn-primary">مشاهده محصولات</a>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <!-- آیتمهای سبد خرید توسط JavaScript لود میشوند -->
+                </div>
+            </div>
+            <div class="cart-modal-footer" id="cartFooter">
+                <div class="cart-total">
+                    <span>جمع کل:</span>
+                    <span class="total-price">۰ افغانی</span>
+                </div>
+                <a href="checkout.html" class="btn-primary">ادامه فرآیند خرید</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- اسکریپتها -->
+    <script src="main.js"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+
